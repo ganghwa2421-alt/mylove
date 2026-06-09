@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>주연이 100일 축하해!</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 구글 폰트: 귀여운 손글씨 느낌의 Hi Melody 폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 메인 화면 -->
+        <main class="main-screen">
+            <div class="floating-decoration deco-1">🎈</div>
+            <div class="floating-decoration deco-2">✨</div>
+            <div class="floating-decoration deco-3">🎀</div>
+            
+            <h1 class="title">동국대 고고미술사학과 26학번<br><span class="highlight-name">한주연</span><br>100일 축하해 💖</h1>
+            
+            <div class="buttons">
+                <button id="btn-messages" class="cute-btn">축하 메시지 보기 💌</button>
+                <button id="btn-gacha" class="cute-btn">포카 뽑기 📸</button>
+                <button id="btn-collection" class="cute-btn">포카 도감 📖</button>
+            </div>
+        </main>
+
+        <!-- 축하 메시지 모달 (포스트잇) -->
+        <div id="modal-messages" class="modal hidden">
+            <div class="modal-content chalkboard">
+                <button class="close-btn">&times;</button>
+                <h2>🎉 축하 메시지 보드 🎉</h2>
+                <div class="post-it-container">
+                    <!-- JavaScript로 포스트잇이 렌더링됩니다 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 가챠(뽑기) 애니메이션 모달 -->
+        <div id="modal-gacha-anim" class="modal hidden">
+            <div class="gacha-anim-container">
+                <div class="magic-wand">🪄✨</div>
+                <p class="blink-text">주연이 포카 뽑는 중...</p>
+            </div>
+        </div>
+
+        <!-- 가챠 결과 모달 -->
+        <div id="modal-gacha-result" class="modal hidden glass-modal">
+            <div class="modal-content result-content">
+                <button class="close-btn">&times;</button>
+                <h2 id="gacha-rarity">등급</h2>
+                <div class="card-reveal">
+                    <div class="card-inner">
+                        <img id="gacha-img" src="" alt="포카 이미지">
+                    </div>
+                </div>
+                <h3 id="gacha-title">칭호</h3>
+                <button id="btn-gacha-again" class="cute-btn small-btn">한 번 더 뽑기 🔄</button>
+            </div>
+        </div>
+
+        <!-- 포카 도감 화면 -->
+        <div id="screen-collection" class="screen hidden">
+            <header class="collection-header">
+                <button id="btn-back-main" class="back-btn">⬅️ 메인으로</button>
+                <h2>주연이 포카 도감</h2>
+                <p>수집 달성률: <span id="collection-progress">0/20</span></p>
+                <div class="progress-bar-container">
+                    <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                </div>
+            </header>
+            <div class="collection-grid" id="collection-grid">
+                <!-- JavaScript로 그리드 아이템이 렌더링됩니다 -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
